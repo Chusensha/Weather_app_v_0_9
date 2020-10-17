@@ -9,7 +9,7 @@ class Geoweather {
 
     // Fetch weather for COORDINATES from API as promise
     async getWeather() {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${this.latitude}&lon=${this.longitude}&units=${this.units}&lang=${this.lang}&appid=76b93cbb410678929b546b3dcd258ec6`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.latitude}&lon=${this.longitude}&units=${this.units}&lang=${this.lang}&appid=76b93cbb410678929b546b3dcd258ec6`);
 
         const responseData = await response.json();
         return responseData;
