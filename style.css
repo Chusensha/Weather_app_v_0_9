@@ -1,0 +1,413 @@
+
+   
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+/* Set height of body and the document to 100% */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url("/img/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+p {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Style tab links */
+.tab-btn {
+    position: relative;
+    width: 50%;
+    background-color: #FA5757;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius:  0 0 0 0;
+    box-sizing: border-box;
+}
+
+
+.tab-btn:hover {
+  background-color: #f9332c;
+  font-weight: 500;
+  padding: 1rem;
+  padding-bottom: px;
+}
+.tab-btn:hover::after {
+    content:'';
+    /* display: block; */
+    position: absolute;
+    margin: auto;
+    width: 60%;
+    height: 2px;
+    left: 20%;
+    bottom: 10%;
+    background-color: white;
+    
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tab-content {
+    background: 9CDBFF;
+    color: black;
+    display: none;
+    padding: 4rem 0rem;
+    height: 100%;
+}
+
+.grid1 {
+    display: grid;
+    margin: 0.5rem 2rem 1rem 2rem;
+    grid-template-columns: auto 25%;
+    grid-template-rows: auto 50%;
+    grid-template-areas:
+    'item1 item3'
+    'item2 item3'
+    
+}
+.grid2 {
+    display: grid;
+    margin: 1rem 2rem 1rem 2rem;
+    /* padding: 10px 0; */
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+    'item4 item5'
+    'item4 item6'
+    'item4 item7'
+    'item4 item8'
+
+}
+.grid3 {
+    display: grid;
+    margin: 0.5rem 2rem 1rem 2rem;
+    /* padding: 10px; */
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    'item9 item10'
+    'item9 item11'
+    'item12 item13'
+    'item12 item14'
+    
+}
+.grid4 {
+    display: grid;
+    margin: 0.5rem 2rem 1rem 2rem;
+    /* padding: 10px; */
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+    'item15 item16'
+    'item17 item18'
+    
+    
+   
+}
+
+.item1 {grid-area: item1; font-size: 1.8rem; margin:0; padding: 0; display:flex; align-items: center;}
+
+.item2 {grid-area: item2; font-size: 1.3rem; margin:0; padding: 0; display:flex; align-items: center; }
+
+.item3 { grid-area: item3; margin: 0; padding: 0; display:flex; align-items: center; justify-content: center;}
+
+.item4 { grid-area: item4;  margin: 0; padding: 0; display: flex; align-items: center; margin: auto; justify-content: center;}
+
+.item5 { grid-area: item5; font-size: 1.5rem; font-weight: 600; margin: 0; padding: 0; display: flex; align-items: center;}
+
+.item6 { grid-area: item6; font-size: 2.5rem; font-weight: 500; margin:0; padding: 0;}
+
+.item7 { grid-area: item7; font-size: 1.5rem; font-weight: 500; margin: 0; padding: 0;}
+
+.item8 { grid-area: item8; font-size: 2rem; font-weight: 500; margin: 0; padding: 0;}
+
+.item9 { grid-area: item9; margin: 1rem; padding: 0; display:flex; align-items: center; justify-content: center;}
+
+.item10 { grid-area: item10; font-size: 1.2rem; font-weight: 700; margin: 0; padding: 0; display:flex; align-items: center;}
+
+.item11 { grid-area: item11; font-size: 2rem; margin: 0; padding: 0;}
+
+.item12 { grid-area: item12; margin: 1rem; padding: 0; display:flex; align-items: center; justify-content: center;}
+
+.item13 { grid-area: item13; font-size: 1.2rem; font-weight: 700; margin: 0; padding: 0;display:flex; align-items: center;}
+
+.item14 { grid-area: item14; font-size: 1.5rem; margin: 0; padding: 0;}
+
+.item15 { grid-area: item15; font-size: 1.3rem; margin: 0; padding: 1rem 15%; display:flex; align-items: center;}
+
+.item16 { grid-area: item16; font-size: 1.5rem; margin: 0; padding: 0; display:flex; align-items: center;}
+
+.item17 { grid-area: item17; font-size: 1.3rem; margin: 0; padding: 0 15%; display:flex; align-items: center;}
+
+.item18 { grid-area: item18; font-size: 1.5rem; margin: 0; padding: 0; display:flex; align-items: center;}
+
+#location-btn {
+    font-size: 3rem;
+    
+}
+#location-btn:hover {
+    font-size: 3.5rem;
+    
+}
+
+.icon-main {
+    margin: auto;
+    padding: 0;
+    width: 9rem; 
+}
+
+
+.icon_humid {
+    margin: 0;
+    padding: 0;
+    width: 4rem; 
+}
+
+.icon_wind {
+    margin: 0;
+    padding: 0;
+    width: 4.1rem; 
+}
+
+/* Settings tab css */
+
+.settings-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    
+}
+.settings-container p {
+    font-weight: 600;
+    
+}
+
+.btn-settings {
+    width: 10rem;
+    border-radius: 0.3rem;
+    background-color: #f9332c;
+    border: none;
+    color: white;
+    padding: 0.7rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+
+/* Modal css */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 15%;
+    top: 25%;
+    width: 70%;
+    /* height: 50%; */
+    /* padding-bottom: 0rem;; */
+    margin: auto;
+    overflow: auto; /* Enable scroll if needed */
+    background: white;
+    border-radius: 0.7rem;
+    box-shadow: 6px 6px 10px 6px rgba(0,0,0,0.3);
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+}
+    .modal-header {
+        display: flex;
+        
+        background-color: #f9332c;
+        color: white;
+        font-size: 0.8rem;
+
+    }
+    .modal-header h2 {
+        /* align-self: flex-start; */
+        margin: auto 1rem;
+        padding: 0;
+    }
+
+    .modal-header p {
+        margin: 1rem 1.5rem;
+        /* float: right; */
+    }
+  
+    .modal-body {
+        padding: 2rem 2rem;
+    }
+
+    .modal input {
+        width: 100%;
+        border: none;
+        margin-top: 1.5rem;
+        border-bottom: 0.1rem solid red;
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
+
+    .modal button {
+        display: block;
+        background:white;
+        border: none;
+        color:blue;
+        padding: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+
+  
+    /* Add modal Animation */
+
+    @keyframes animatetop {
+        from {left:-25%; opacity:0}
+        to {left:-25; opacity:1}
+    }
+  
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+  
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+  
+    .overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        cursor: pointer;
+      }
+
+
+/* Alert CSS */
+.err-alert {
+    display: none;
+    margin: -10px auto 10px;
+    padding: 1rem;
+    width: 100%;
+    background: #f44336;
+    color: white;
+    justify-content: space-between;
+}
+
+    .alert-text {
+        font-size: 1.3rem;
+        padding-left: 1rem;
+    }
+
+    .alert-close-btn {
+        /* margin-left: 1.5rem; */
+        color: white;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2rem;
+        cursor: pointer;
+        transition: 0.3s;
+        padding-right: 1rem;
+    }      
+      
+    .alert-close-btn:hover {
+        color: black;
+    }
+
+    hr {
+        width: 90%;
+        margin:auto;
+    }
+
+ /* Small devices (landscape phones, 576px and up */
+    @media (min-width: 576px) {
+        html { font-size: 20px; }
+    }
+/* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        html { font-size: 20px; }
+        .container {
+            width: 80%;
+            margin: auto;
+            box-sizing: border-box;
+          }
+        
+        hr {
+            width: 100%;
+            margin:auto;
+        }
+    }
+    
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        html {font-size: 20px;}
+        .container {
+            width: 70%;
+            margin: auto;
+            box-sizing: border-box;
+          }
+
+        .settings-container {
+            width: 60%;
+        }
+    }
+    
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        html { font-size: 20px; }
+        .container {
+            width: 40%;
+            margin: auto;
+            
+          }
+        .modal {
+            width: 20%;
+            left: 40%;
+            top: 25%;
+        }
+        .settings-container {
+            width: 30%;
+        }
+    }

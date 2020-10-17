@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400, 500, 600, 700, 800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <button class="tab-btn" onclick="openTab('Today', this)" id="defaultOpen">Weather</button>
+        <!-- <button class="tab-btn" onclick="openTab('Forecast', this)" >Forecast</button> -->
+        <button class="tab-btn" id="btnSettings">Settings</button>
+    
+       
+        <div id="Today" class="tab-content">
+
+            <!-- Error handler -->
+            <div class="err-alert" id="err-handler">
+                <span class="alert-text"></span>
+                <span class="alert-close-btn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                
+            </div>
+
+
+            <!-- Tab body -->
+            <div class="grid1">
+                <div class="item1" id="w-location"></div>
+                <div class="item2" id="w-date""></div>
+                <div class="item3" id="location-icon""><span class="material-icons" id="location-btn" style="color: red">location_on</span></div>
+            </div>
+            <hr style="border: 0.5px solid rgb(240, 85, 85);">
+            <div class="grid2">
+                <div class="item4" id="w-icon""></div>
+                <div class="item5" id="w-description"></div>
+                <div class="item6" id="w-temperature"></span></div>
+                <div class="item7"><span>Feels like</span></div>
+                <div class="item8" id="w-feelslike"></div>
+            </div>
+            <hr style="border: 0.5px solid rgb(240, 85, 85);">
+            <div class="grid3">
+                <div class="item9"><img class="icon_humid" src="img/humidityicon.svg"></div>
+                <div class="item10">Humidity</div>
+                <div class="item11" id="w-humidity"></div>
+                <div class="item12"><img class="icon_wind" src="img/wind.svg"></div>
+                <div class="item13"><span>Wind speed</span></div>
+                <div class="item14" id="w-windspeed"></div>
+            </div>
+            <hr style="border: 0.5px solid rgb(240, 85, 85);">
+            <div class="grid4">
+                <div class="item15">Sunrise:</div>
+                <div class="item16" id="w-sunrise"></div>
+                <div class="item17">Sunset:</div>
+                <div class="item18" id="w-sunset"></div>
+            </div>
+            </div>
+        </div>
+
+
+
+        <!-- SETTINGS - tab -->
+        <div id="Settings" class="tab-content">
+            <div class="settings-container">
+
+                <h3>Settings</h3>
+                <form id="settings" name="settings">
+                    <p>Please select your metric:</p>
+                    <input type="radio" id="metric" name="units" value="metric">
+                    <label for="metric">Metric (ex. km/h, &#8451)</label><br>
+                    <input type="radio" id="imperial" name="units" value="imperial">
+                    <label for="imperial">Imperial (ex. ml/h, &#8457)</label><br>
+                
+                    <br>  
+                
+                    <p>Please select your language:</p>
+                    <input type="radio" id="en" name="lang" value="en">
+                    <label for="en">English</label><br>
+                    <input type="radio" id="fr" name="lang" value="fr">
+                    <label for="fr">Français</label><br>  
+                    <input type="radio" id="bg3" name="lang" value="bg">
+                    <label for="bg">Български</label><br><br>
+                    <input type="submit" class="btn-settings" value="Save">
+                </form>
+             </div> 
+        </div>
+
+    
+       
+        <!-- Modal -->
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h2>Get weather by city or location</h2>
+                <p class="close">&times;</p>
+            </div>
+            <div class="modal-body">
+                <h3>Select city</h3>
+                <input type="text" placeholder="Enter city name" id="new_city" name="city" onfocus="this.value=''">
+                <button type="button" class="btn-change-city">OK</button>
+                
+                <!-- <h3>Use my location</h3> -->
+                <button type="button" class="btn-change-location">Use my location</button>
+            </div>
+        </div>
+
+        <!-- Modal overlay -->
+        <div class="overlay"></div>
+
+
+
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js" integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg==" crossorigin="anonymous"></script>
+    <script src="storage.js"></script>
+    <script src="geoweather.js"></script>
+    <script src="weather.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+       
+</body>
+</html>
